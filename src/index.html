@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henrique: Dev Front-End</title>
+    <!-----------importação via link------------->
+    <link rel="stylesheet" href="/src/css/style_first_screen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!---------------------------------------------------------------------->
+</head>
+<body>
+    <header>
+        <button class="button_menu">
+            <svg id="svg_btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="2" y1="8" x2="22" y2="8"/>
+                <line x1="2" y1="16" x2="22" y2="16" />
+            </svg>
+        </button>
+        <nav class="menu">
+            <ul>
+            </ul>
+        </nav>
+        <div class="sec_location">
+            <div class="square_mark"></div>
+            <div class="square sec1"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+    </header>
+    <main>
+        <div class="left_side">  
+            <!---
+                <section class="first">
+                    <img src="assets/user_icon_test.png" alt="" class="me_img">
+                    <p class="line anim-typewriter">Ola, eu sou Henrique!</p>
+                </section>  
+            -->
+            <section class="second">
+                <span class="material-symbols-outlined" id="arrow-next">
+                    arrow_forward_ios
+                </span>
+                <div class="carrossel">
+                    <div class="card">
+                        <div class="flex_content">
+                            <div class="">
+                                <img src="assets/icon_html.png" alt="" id="icon_html">
+                            </div>
+                            <div>
+                                <h1>HTML5</h1>
+                                <h1>HTML5</h1>
+                                <h1>HTML5</h1>
+                            </div>
+                        </div>
+                        <h2>
+                            HTML (Hypertext Markup Language) é essencial para páginas web, estruturando documentos com tags em cabeçalho, corpo e rodapé. Atributos fornecem informações extras. Elementos semânticos, como header e nav, melhoram significado. Suporta listas, tabelas, formulários e multimídia. Combinado com CSS e JavaScript, é vital para o desenvolvimento web, com HTML5 trazendo melhorias contínuas.
+                        </h2>
+                        <h3 class="line anim-typewriter_js">&lt;h3 class="line anim-typewriter_html"&gt;&lt;/h3&gt;
+                        </h3>
+                        <div class="wrapper">
+                            <div class="skill">
+                                <div class="skill_flex">
+                                    <p>HTML 5</p>
+                                    <span class="skill-count6">92%</span>
+                                </div>
+                                <div class="skill-bar skill6 wow slideInLeft animated">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="flex_content">
+                            <div class="">
+                                <img src="assets/css_icon.png" alt="" id="icon_css">
+                            </div>
+                            <div>
+                                <h1>CSS3</h1>
+                                <h1>CSS3</h1>
+                                <h1>CSS3</h1>
+                            </div>
+                        </div>
+                        <h2>
+                            CSS (Cascading Style Sheets) é uma linguagem de estilo para documentos HTML, aplicando propriedades visuais como cores e layout. Essencial no desenvolvimento web, permite a separação de conteúdo e design, usando seletores para direcionar elementos específicos. Adota o modelo de cascata para determinar prioridades de estilo.
+                        </h2>
+                        <h3 class="line anim-typewriter_js">.anim-typewriter_js{typewriter_js 4s infinite}
+                        </h3>
+                        <div class="wrapper">
+                            <div class="skill">
+                                <div class="skill_flex">
+                                    <p>CSS 3</p>
+                                    <span class="skill-count7">73%</span>
+                                </div>
+                                <div class="skill-bar skill7 wow slideInLeft animated">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="flex_content">
+                            <div class="base js">
+                                JS
+                            </div>
+                            <div>
+                                <h1>JAVASCRIPT</h1>
+                                <h1>JAVASCRIPT</h1>
+                                <h1>JAVASCRIPT</h1>
+                            </div>
+                        </div>
+                        <h2>
+                            JavaScript é uma linguagem de programação de alto nível, dinâmica e interpretada. Ela é conhecida principalmente por ser a linguagem de script dos navegadores web, mas também é usada em diversos ambientes, incluindo servidores e dispositivos móveis. Abaixo estão algumas características principais do JavaScript:
+                        </h2>
+                        <h3 class="line anim-typewriter_js">button_menu.addEventListener("click", function())</h3>
+                        <div class="wrapper">
+                            <div class="skill">
+                                <div class="skill_flex">
+                                    <p>JAVASCRIP</p>
+                                    <span class="skill-count4">75%</span>
+                                </div>
+                                <div class="skill-bar skill4 wow slideInLeft animated">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="flex_content">
+                            <div class="base ts">
+                                TS
+                            </div>
+                            <div>
+                                <h1>TYPESCRIPT</h1>
+                                <h1>TYPESCRIPT</h1>
+                                <h1>TYPESCRIPT</h1>
+                            </div>
+                        </div>
+                        <h2>
+                            TypeScript é uma linguagem de programação de código aberto desenvolvida pela Microsoft. Ela é uma extensão do JavaScript que adiciona tipagem estática opcional e outros recursos avançados ao JavaScript. O TypeScript é projetado para ser compatível com o JavaScript existente, permitindo que os desenvolvedores gradualmente adotem e usem recursos avançados.
+                        </h2>
+                        <h3 class="line anim-typewriter_js">function soma(a: number, b: number):number{}</h3>
+                        <div class="wrapper">
+                            <div class="skill">
+                                <div class="skill_flex">
+                                    <p>TYPESCRIP</p>
+                                    <span class="skill-count5">80%</span>
+                                </div>
+                                <div class="skill-bar skill5 wow slideInLeft animated">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="flex_content">
+                            <div class="">
+                                <img src="assets/ag-logo2.png" alt="" class="icon_ag">
+                            </div>
+                            <div>
+                                <h1>ANGULAR</h1>
+                                <h1>ANGULAR</h1>
+                                <h1>ANGULAR</h1>
+                            </div>
+                        </div>
+                        <h2>
+                            Angular: Framework web mantido pelo Google, usa TypeScript e adota modelo MVC. Ideal para criar aplicações dinâmicas e escaláveis, oferece vinculação bidirecional, injeção de dependência e modularidade. Facilita SPAs com componentes reutilizáveis. Angular CLI simplifica desenvolvimento e teste. Comunidade ativa, escolha popular para eficiência em projetos web.
+                        </h2>
+                        <h3 class="line anim-typewriter_js">import { Component } from '@angular/core';</h3>
+                        <div class="wrapper">
+                            <div class="skill">
+                                <div class="skill_flex">
+                                    <p>ANGULAR</p>
+                                    <span class="skill-count8">30%</span>
+                                </div>
+                                <div class="skill-bar skill8 wow slideInLeft animated">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+        </div>
+        <div class="rigth_side">
+            <div class="rigth_side_intro">
+                <h1>Front-end Developer.</h1>
+                <p class="flex_content_p">
+                    Meu nome é Henrique. Sou apaixonado por transformar designs criativos em experiências web incríveis com tecnologias modernas de front-end.
+                </p>
+                <p class="flex_content_p_bottom">
+                    Buscando oportunidades desafiadoras para aplciarminhas habilidades front-end, contribuindo para o desenvolvimento de soluções inovadora.
+                </p> 
+                <div class="flex_content">
+                    <button class="btn_letswork">
+                        Vamos trabalhar juntos?
+                    </button>
+                </div>
+            </div>
+            <div class="svg_details">
+                <div style="width: 120px; position: relative; height: 250px; transform: rotate(90deg); margin-top: 541px;">
+                    <svg width="200" height="300px" xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom: 0;" stroke="white">
+                        <line x1="180" y1="20" x2="20" y2="20" stroke-width="15" />
+                        <line x1="180" y1="60" x2="50" y2="60" stroke-width="15" />
+                        <line x1="180" y1="100" x2="80" y2="100" stroke-width="15" />
+                        <line x1="180" y1="140" x2="110" y2="140" stroke-width="15" />
+                        <line x1="180" y1="180" x2="140" y2="180" stroke-width="15" />          
+                    </svg>
+                </div>                                                                 
+            </div>
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+    <script src="js/carroussel.js"></script>
+</body>
+</html>

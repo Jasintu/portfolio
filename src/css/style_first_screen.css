@@ -1,0 +1,649 @@
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    user-select: none;
+    font-family: 'Oswald', sans-serif;
+    animation: intro_ 1s ease;
+}
+
+@keyframes intro_{
+    from{
+        margin-top: -100px;
+    }to{
+        
+    }
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-items: end;
+    gap: 70%;
+    position: fixed;
+}
+
+.name_header{
+    color: rgb(0, 0, 0);
+    height: 100%;
+    align-items: end;
+    display: flex;
+    margin-bottom: -20px;
+}
+
+.name_header span{
+    font-size: 80px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.name_header span:hover{
+    padding-bottom: 10px;
+}
+
+.button_menu {
+    width: 30px;
+    height: 30px;
+    margin-left: 80%;
+    background-color: transparent;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+    scale: 3;
+    z-index: 2;
+}
+
+.button_menu:hover{
+    transform: scale(1.1);
+}
+
+.button_menu::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    font-size: 50px;
+    margin-top: -60px;
+    margin-left: -15px;
+}
+
+.button_menu::after {
+    position: absolute;
+    content: "";
+    font-size: 70px;
+    margin-left: -5px;
+    margin-top: -68px;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+}
+
+.left_side::-webkit-scrollbar {
+    width: 0;
+}
+
+.left_side{
+    width: 50%;
+    max-height: 100%;
+    overflow-x: hidden;
+}
+
+.rigth_side{
+    width: 50%;
+    height: 100vh;
+    color: rgb(255, 255, 255);
+    display: flex;
+    overflow: hidden;
+    background: linear-gradient(-45deg, rgb(0, 0, 0), rgb(15, 15, 15), rgb(8, 8, 8), rgb(15, 15, 15));
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.rigth_side p{
+    margin-left: 5px;
+    width: 400px;
+}
+
+.flex_content{
+    margin-top: 4%;
+    display: flex;
+}
+
+.flex_content_p{
+    gap: 50px;
+    font-size: 25px;
+}
+
+.flex_content_p_bottom{
+    gap: 50px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.flex_content p{
+    margin-top: 10px;
+    width: 250px;
+}
+
+.position_relative{
+    position: absolute;
+    margin-left: 30%;
+}
+
+.rigth_side_intro{
+    width: 70%;
+    height: 100vh;
+    margin-left: 10px;
+}
+
+.rigth_side_intro h1{
+    width: 100%;
+    font-size: 120px;
+    white-space: pre-line;
+    border-bottom: 10px solid white;
+    margin-bottom: 20px;
+}
+
+.svg_details{
+    width: 30%;
+    height: 100vh;
+}
+
+@keyframes blink {
+    0%, 50% {
+      opacity: 0;
+    }
+    51%, 100% {
+      opacity: 1;
+    }
+}
+
+.left_side_intro{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eb4545;
+}
+
+.me_img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+
+.circle{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 15px solid rgb(255, 255, 255);
+    border-top-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    position: absolute;
+    z-index: 0;
+    top: 90px;
+    animation: spin 1.5s infinite;
+}
+
+@keyframes spin { 
+    from{
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+.line {
+    position: relative;
+    width: 0px;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.anim-typewriter {
+    animation: typewriter 4s steps(9) 500ms infinite,
+    blinkTextCursor 500ms steps(9) infinite normal;
+    margin-top: 40px;
+    margin-bottom: -10px;
+}
+
+.anim-typewriter_js {
+    animation: typewriter_js 4s steps(9) 500ms infinite,
+    blinkTextCursor 500ms steps(9) infinite normal;
+    margin-top: 40px;
+    margin-bottom: -10px;
+}
+
+@keyframes typewriter_js {
+    0% {
+          width: 0px;
+    }
+    10% {
+          width: 0px;
+    }
+    25% {
+          width: 560px;
+    }
+    75% {
+          width: 560px;
+    }
+    90% {
+          width: 0px;
+    }
+    100% {
+          width: 0px;
+    }
+}
+@keyframes blinkTextCursor {
+    from {
+          border-right-color: rgba(0, 0, 0, 0.75);
+    }
+    to {
+          border-right-color: transparent;
+    }
+}
+
+.sec_location{
+    width: 50px;
+    height: 200px;
+    position: fixed;
+    left: 65px;
+    top: 360px;
+    transform: translate( -50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.square_mark{
+    width: 9px;
+    height: 9px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+.square{
+    width: 8px;
+    height: 8px;
+    background-color: rgb(0, 0, 0);
+    transform: rotate(45deg);
+    cursor: pointer;
+    animation: rotate 5s infinite;
+}
+
+.second:hover .sec1{
+    width: 9px;
+    height: 9px;
+    border: 3px solid rgb(0, 0, 0);
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(45deg);
+    }to{
+        transform: rotate(405deg);
+    }
+}
+
+.base{
+    height: 100px;
+    width: 100px;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.js{
+    font-size: 80px;
+    text-align: end;
+    transition: 0.3s ease;
+    background-color: yellow;
+}
+
+.ts{
+    font-size: 80px;
+    text-align: end;
+    transition: 0.3s ease;
+    background-color: rgb(23, 131, 202);
+}
+
+.ag:hover polygon {
+    fill: #eb4545;
+}
+
+.one{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.btn_letswork{
+    font-size: 20px;
+    border-radius: 39px;
+    color: aliceblue;
+    background-color: transparent;
+    border: 2px solid white;
+    height: 70px;
+    width: 240px;
+    margin-left: 70px;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn_letswork:hover{
+    background-color: aliceblue;
+    color: black;
+    scale: 1.1;
+}
+
+.first{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.second{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+    opacity: 0.9;
+}
+
+.carrossel {
+    width: 50vw;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.carrossel::-webkit-scrollbar {
+    width: 0;
+}
+
+.carrossel2 {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.carrossel2::-webkit-scrollbar {
+    width: 0;
+}
+
+.card {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    position: relative;
+}
+
+
+.card h2{
+    text-align: center;
+    white-space: pre-wrap;
+    height: 300px;
+    width: 400px;
+    font-size: 20px;
+    margin-top: 10px;
+    color: black;
+}
+  
+.item:first-child {
+    opacity: 1;
+}
+
+.flex_content_img{
+    margin-top: 100px;
+    display: flex;
+    gap: 25px;
+}
+
+.flex_content_img img{
+    height: 100px;
+    width: 100px;
+}
+
+.git-logo{
+    background-color: aliceblue;
+    border-radius: 50%;
+}
+
+.link-logo{
+    background-color: aliceblue;
+    border-radius: 10px;
+    width: 90px;
+    height: 90px;
+}
+
+.menu{
+    background-color: aliceblue;
+    height: 500px;
+    width: 350px;
+    position: absolute;
+    top: 40%;
+    margin-left: 65%;
+    z-index: 1;
+    animation: menu_ani 0.3s ease;
+    display: none;
+}
+
+.menu ul{
+    margin-top: 100px;
+    list-style: none;
+}
+
+.menu li{
+    color: black;
+    font-size: 25px;
+    padding-left: 20px;
+    margin-top: 10px;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+@keyframes menu_ani {
+    from{
+        height: 0px;
+    }to{
+        height: 500px;
+    }
+}
+
+@keyframes menu_rev {
+    from{
+        height: 500px;
+    }to{
+        height: 0px;
+    }
+}
+
+.wrapper{
+    padding-top: 40px;
+    width: 400px;
+    font-family: 'Roboto', sans-serif;
+  margin:0 auto;
+  }
+  .skill {
+    margin-bottom: 35px;
+    position: relative;
+  overflow-x:hidden;
+  
+  }
+  .skill > p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1716;
+    margin: 0;
+  }
+  .skill:before{
+    width: 100%;
+    height: 5px;
+    content: "";
+    display: block;
+    position: absolute;
+    background: #959595;
+    bottom: 0;
+  }
+  .skill-bar {
+    width: 100%;
+    height: 5px;
+    background:#f4392f;
+    display: block;
+    position: relative;
+  }
+  
+  /* SKILL 1 */
+  .skill1{
+    width: 95%;
+  
+  }
+  .skill-bar span{
+    position: absolute;
+    border-top: 5px solid #f4392f;
+    padding: 0;
+    font-size: 18px;
+    padding: 3px 0;
+    font-weight: 500;
+  }
+  .skill-bar {
+    position: relative;
+  }
+  /* SKILL 4 */
+  .skill4{
+    width: 75%
+  }
+  
+  .skill4 .skill-count4 {
+    right: 0;
+  }
+  .skill5{
+    width: 80%
+  }
+  
+  .skill5 .skill-count5 {
+    right: 0;
+  }
+  .skill6{
+    width: 92%
+  }
+  
+  .skill6 .skill-count6 {
+    right: 0;
+  }
+  .skill7{
+    width: 73%
+  }
+  
+  .skill7 .skill-count6 {
+    right: 0;
+  }
+  .skill8{
+    width: 30%
+  }
+  
+  .skill8 .skill-count6 {
+    right: 0;
+  }
+
+.skill_flex{
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    justify-self: center;
+    gap: 240px;
+}
+
+#icon_html{
+    height: 120px;
+    width: 120px;
+    margin-bottom: -10px;
+}
+
+#icon_css{
+    height: 150px;
+    width: 150px;
+    margin-bottom: -30px;
+    margin-top: -12px;
+    margin-right: -15px;
+}
+
+#arrow-next{
+    font-size: 70px;
+    position: absolute;
+    left: 700px;
+    animation: anima-arrow 1s infinite;
+}
+
+@keyframes anima-arrow{
+    0%{
+        left: 680px;
+    }50%{
+        left: 700px;
+    }100%{
+        left: 680px;
+    }
+}
+
+.icon_ag{
+    height: 120px;
+    width: 120px;
+    margin-right: 5px;
+}
