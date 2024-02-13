@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400&family=Oswald:wght@400;500&family=Protest+Strike&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:wght@400;500&family=Kanit:wght@200;300;400&family=Oswald:wght@400;500&family=Protest+Strike&display=swap');
+
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    color: #dad3d3;
 }
   
-/*header config*/
+/*header style*/
 
 header{
-    position: relative;
-    width: 100vw;
+    display: flex;
+    justify-content: end;
 }
 
 .container_header{
-    width: 100vw;
-    height: 15vh;
+    width: 15vw;
+    height: 100vh;
     position: fixed;
     z-index: 1;
 }
@@ -31,15 +31,20 @@ header{
 .main_container_header{
     width: 100%;
     height: 100%;
-    align-items: end;
     display: flex;
-    justify-content: end;
-    opacity: 0;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+
 }
 
-.main_container_header span, li{
+.main_container_header li{
     color: aliceblue;
-    font-size: 30px;
+}
+
+#menu{
+    font-size: 100px;
+    margin-top: 50px;
 }
 
 .main_container_header ul{
@@ -47,51 +52,45 @@ header{
     display: flex;
     gap: 30px;
     border: 0;
-    font-family: 'Kanit', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Protest Strike', sans-serif;
     list-style-type:none;
     height: 30px;
     align-items: center;
 }
 
 .section_locate{
-    width: 50px;
     height: 150px;
-    position: fixed;
-    z-index: -1;
-    top: 80%;
-    left: 90%;
-    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    gap: 28px;
-    transform: rotate(270deg);
+    gap: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .square{
-    height: 10px;
-    width: 40px;
-    background-color: #ffffff;
+    height: 3px;
+    width: 30px;
+    background-color: #b1adad;
 }
 
 .square_mark{
-    height: 10px;
-    width: 60px;
-    animation: intro-square_mark 0.3s forwards;
+    height: 5px;
+    width: 50px;
+    animation: intro-square_mark 0.3s ease;
     background-color: #ffffff;
 }
 
 @keyframes intro-square_mark {
     from{
-        height: 10px;
-        width: 40px;
+        height: 3px;
+        width: 30px;
         background-color: #ffffff;
     }to{
-        height: 10px;
-        width: 60px;
+        height: 5px;
+        width: 50px;
         background-color: #ffffff;
     }
 }
@@ -134,9 +133,12 @@ header{
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    /*
     background-image: url(https://th.bing.com/th/id/R.b7e80028ebc5b553a18a24ecffd8ebc2?rik=FQFEA%2fjA5j3Ckg&pid=ImgRaw&r=0);
+    */
     animation: 1s intro_main_matter_picture ease;
     display: flex;
+    background-color: #0F172A;
 }
 
 @keyframes intro_main_matter_picture{
@@ -151,11 +153,6 @@ header{
     width: 100%;
     color: #ffffff;
     height: 100%;
-    font-family: 'Bebas Neue', sans-serif;
-    font-family: 'Cabin', sans-serif;
-    font-family: 'Kanit', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Protest Strike', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,57 +160,73 @@ header{
     justify-items: center;
 }
 
+.main_matter_picture_left_side a{
+    color: #bbb7b7;
+    margin-right: 1px;
+}
+
 .main_matter_picture_left_side_2{
     width: 20%;
-    color: #ffffff;
+    color: #dad3d3;
     height: 100%;
-    font-family: 'Bebas Neue', sans-serif;
-    font-family: 'Cabin', sans-serif;
-    font-family: 'Kanit', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Protest Strike', sans-serif;
     text-align: center;
     justify-content: start;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 90px;
 }
 
-.main_matter_picture_left_side_2 p, h1{
+.main_matter_picture_left_side_2 p{
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
-    font-size: 130px;
+    font-size: 100px;
+    white-space: nowrap;
+}
+
+
+.main_matter_picture_left_side_2 p{
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    font-size: 100px;
+    white-space: nowrap;
 }
 
 .main_matter_picture_left_side_2 span{
-    height: 100px;
-    width: 10px;
-    background-color: #ffffff;
-    margin-top: -140px;
-    margin-bottom: 100px;
+    height: 50px;
+    width: 5px;
+    background-color: #e6e5e5;
+    margin-top: -190px;
 }
 
-.main_matter_picture_left_side_2  h1{
+.main_matter_picture_left_side_2  h2{
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
     font-size: 30px;
     transform: rotate(90deg);
+    margin-top: 40px;
+    white-space: nowrap;
 }
+
 
 .main_matter_picture_left_side p{
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
-    font-size: 1em;
+    font-size: 19px;
     width: 50%;
+    color: #ffffff;
 }
 
 .main_matter_picture_left_side h1{
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
-    font-size: 120px;
-    border-bottom: 4px solid white;
+    font-size: 40px;
+}
+
+.main_matter_picture_left_side h1::first-letter{
+    border-bottom: 2px solid white;
 }
 
 .main_matter_picture_left_side h2{
-    margin-top: -80px;
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
-    font-size: 40px;
+    font-size: 100px;
+    width: 50%;
+    margin-top: -40px;
     margin-bottom: -20px;
 }
 
@@ -265,24 +278,6 @@ header{
     }to{
         margin-top: 0;
     }
-}
-
-.skills{
-    color: black;
-    font-family: 'Kanit', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Protest Strike', sans-serif;
-    align-items: start;
-    display: flex;
-    justify-content:start;
-    align-items: center;
-    height: 20%;
-}
-
-.skills p{
-    font-size: 25px;
-    transform: rotate(90deg);
-    margin-left: -50px;
 }
 
 /*------------------------------------------*/
