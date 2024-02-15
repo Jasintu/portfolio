@@ -12,6 +12,7 @@ body, html {
     font-weight: 300;
     font-style: normal;
     color: #dad3d3;
+    cursor: url('../assets/cursor.png'), auto;
 }
   
 /*header style*/
@@ -35,16 +36,151 @@ header{
     justify-content: start;
     align-items: center;
     flex-direction: column;
-
+    animation: 1s intro_main_matter_picture_reverse ease;
 }
 
 .main_container_header li{
     color: aliceblue;
 }
 
-#menu{
-    font-size: 100px;
+@keyframes animation_menu_reverse{
+    from{
+        height: 50px;
+        width: 90px;
+        margin-top: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        color: white;
+        background-color: transparent;
+        border: 0px;
+    }to{
+
+    }
+}
+
+.blink::after {
+    content: "|";
+    height: 10px;
+    width: 2px;
+    animation: blink-animation 0.5s infinite alternate;
+  }
+
+  @keyframes blink-animation {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+
+.menu_ul{
+    transition: scale 1s ease;
+    position: fixed;
+    top: 28%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+    height: 0px;
+    width: 300px;
+    background-color: #ffffff;
+    z-index: 2;
+    scale: 0;
+}
+
+.menu_ul_open{
+    transition: padding-bottom 1s ease;
+    position: fixed;
+    top: 28%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 300px;
+    background-color: #ffffff;
+    z-index: 2;
+    scale: 1;
+}
+
+@keyframes intro_menu {
+    from{
+        height: 0px;
+    }to{
+        height: 400px;
+    }
+}
+
+@keyframes intro_menu_rev {
+    from{
+        height: 400px;
+    }to{
+        height: 0px;
+    }
+}
+
+.menu{
+    height: 50px;
+    width: 90px;
     margin-top: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    color: white;
+    background-color: transparent;
+    border: 0px;
+}
+
+#menu{
+    position: relative;
+    z-index: 3;
+}
+
+.menu::before{
+    transition: 0.1s ease;
+    font-size: 130px;
+    content: "_";
+}
+
+.menu::after{
+    transition: 0.1s ease;
+    font-size: 90px;
+    content: "_";
+    margin-top: -70px;
+}
+
+.menu-toggle{
+    height: 50px;
+    width: 90px;
+    margin-top: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    border: 0px;
+}
+
+.menu-toggle::before{
+    transition: 0.1s ease;
+    font-size: 130px;
+    content: "_";
+    transform: rotate(45deg);
+    transform-origin: bottom;
+}
+
+.menu-toggle::after{
+    transition: 0.1s ease;
+    transform: rotate(-45deg);
+    transform-origin: bottom;
+    font-size: 130px;
+    content: "_";
+    margin-top: -150px;
+    margin-right: -10px;
 }
 
 .main_container_header ul{
@@ -58,6 +194,7 @@ header{
 }
 
 .section_locate{
+    animation: 1s intro_main_matter_picture_reverse ease;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -103,22 +240,37 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    font-size: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+    visibility: hidden;
+    
 }
 
+@keyframes animation_background{
+    from{
+        scale: 0.2;
+    }
+    to{
+        scale: 1;
+    }
+}
 
+@keyframes animation_background_reverse{
+    from{
+        scale: 0.2;
+    }
+    to{
+        scale: 1;
+    }
+}
 
 /*css primeira secção*/
 
 #section1 {
     height: 100vh;
     width: 100%;
-    opacity: 1;
+    visibility: visible;
     display: flex;
 }
 
@@ -128,17 +280,22 @@ header{
 }
 
 .main_matter_picture{
+    background-image: radial-gradient(circle at 20% 0%, rgba(0, 0, 0, 0.955), rgba(0, 0, 0, 0.976), black);
     height: 100vh;
     width: 100%;
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    /*
-    background-image: url(https://th.bing.com/th/id/R.b7e80028ebc5b553a18a24ecffd8ebc2?rik=FQFEA%2fjA5j3Ckg&pid=ImgRaw&r=0);
-    */
-    animation: 1s intro_main_matter_picture ease;
+    position: relative;
     display: flex;
-    background-color: #0F172A;
+}
+
+@keyframes intro_main_matter_picture_pic{
+    from{
+        margin-top: 100%;
+    }to{
+        margin-top: 0;
+    }
 }
 
 @keyframes intro_main_matter_picture{
@@ -146,6 +303,14 @@ header{
         margin-left: -100%;
     }to{
         margin-left: 0;
+    }
+}
+
+@keyframes intro_main_matter_picture_reverse{
+    from{
+        margin-top: 600%;
+    }to{
+        margin-top: 0px;
     }
 }
 
@@ -160,9 +325,29 @@ header{
     justify-items: center;
 }
 
-.main_matter_picture_left_side a{
+.link_resume{
     color: #bbb7b7;
     margin-right: 1px;
+    cursor: pointer;
+}
+
+.flex_direction{
+    display:  flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.git-logo{
+    background-color: #ffffff;
+    border-radius: 50%;
+    height: 60px;
+}
+
+.linkend-logo{
+    height: 60px;
+    background-color: #ffffff;
+    overflow: hidden;
+    border-radius: 4px;
 }
 
 .main_matter_picture_left_side_2{
@@ -175,6 +360,7 @@ header{
     flex-direction: column;
     align-items: center;
     gap: 90px;
+    animation: 1s intro_main_matter_picture ease;
 }
 
 .main_matter_picture_left_side_2 p{
@@ -225,7 +411,7 @@ header{
 .main_matter_picture_left_side h2{
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
     font-size: 100px;
-    width: 50%;
+    width: 70%;
     margin-top: -40px;
     margin-bottom: -20px;
 }
@@ -280,11 +466,37 @@ header{
     }
 }
 
+.me{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 23%;
+    animation: intro_main_matter_picture_pic 1s ease;
+}
+
+.me img{
+    max-width: 100vh;
+    height: auto;
+    border-radius: 50%;
+}
+
 /*------------------------------------------*/
+/*segunda secção*/
 
 #section2 {
-    background-color: lightgreen;
+    background-color: aquamarine;
 }
+
+.section_two_journey{
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+}
+
+/*------------------------------------------*/
 
 #section3 {
     background-color: lightcoral;
@@ -299,6 +511,7 @@ header{
           margin-bottom: 100%;
         }
         to {
-            margin-bottom: 0;
+          margin-bottom: 0%;
+
     }
   }

@@ -9,16 +9,20 @@ function scrollHandler(event) {
     isScrolling = true;
     setTimeout(() => {
       if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
-        sections[currentSectionIndex].style.opacity = "0";
+        sections[currentSectionIndex].style.visibility = "hidden";
         squares[currentSectionIndex].classList.remove('square_mark');
+        sections[currentSectionIndex].style.animation = "none";
         currentSectionIndex++;
-        sections[currentSectionIndex].style.opacity = "1";
+        sections[currentSectionIndex].style.visibility = "visible";
+        sections[currentSectionIndex].style.animation = "animation_background 0.4s ease";
         squares[currentSectionIndex].classList.add('square_mark');
       } else if (event.deltaY < 0 && currentSectionIndex > 0) {
-        sections[currentSectionIndex].style.opacity = "0";
+        sections[currentSectionIndex].style.visibility = "hidden";
         squares[currentSectionIndex].classList.remove('square_mark');
+        sections[currentSectionIndex].style.animation = "none";
         currentSectionIndex--;
-        sections[currentSectionIndex].style.opacity = "1";
+        sections[currentSectionIndex].style.animation = "animation_background_reverse 0.4s ease";
+        sections[currentSectionIndex].style.visibility = "visible";
         squares[currentSectionIndex].classList.add('square_mark');
       }
       isScrolling = false;
