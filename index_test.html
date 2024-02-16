@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Div Responsiva</title>
-<style>
-    .fixed-div {
-        position: fixed; /* Mantém a div fixa na tela */
-        top: 50px;
-        left: 50px;
-        width: 200px;
-        height: 100px;
-        background-color: lightblue;
-    }
-    
-    .responsive-div {
-        position: relative; /* Faz com que a div seja relativa ao fluxo normal do documento */
-        width: 200px;
-        height: 100px;
-        background-color: lightgreen;
-    }
-</style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 <body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <!-- ... -->
+        </div>
+    </div>
 
-<div class="fixed-div">
-    Esta div acompanha ao rolar a página.
-</div>
-
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            freeMode: true,
+            touchStartPreventDefault: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 </html>
