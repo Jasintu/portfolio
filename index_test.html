@@ -1,30 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            height: 6px;
+            background-color: #6c757d;
+            left: 0;
+            right: 0;
+            top: 50%;
+            margin-top: -3px;
+        }
+
+        .container {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+
+        .container::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            bottom: -17px;
+            background-color: white;
+            border: 4px solid #6c757d;
+            left: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .left {
+            top: 0;
+        }
+
+        .right {
+            top: 50%;
+        }
+
+        .left::before {
+            content: " ";
+            width: 0;
+            position: absolute;
+            left: 22px;
+            height: 0;
+            z-index: 1;
+            bottom: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::before {
+            content: " ";
+            width: 0;
+            position: absolute;
+            left: 22px;
+            height: 0;
+            z-index: 1;
+            top: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        .right::after {
+            top: -16px;
+        }
+
+        .content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+    </style>
 </head>
 <body>
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <!-- ... -->
-        </div>
-    </div>
 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            freeMode: true,
-            touchStartPreventDefault: false,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
-    </script>
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>2023</h2>
+      <p>Descrição do evento em 2023.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2024</h2>
+      <p>Descrição do evento em 2024.</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2025</h2>
+      <p>Descrição do evento em 2025.</p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2026</h2>
+      <p>Descrição do evento em 2026.</p>
+    </div>
+  </div>
+  <!-- Adicione mais eventos conforme necessário -->
+</div>
+
 </body>
 </html>
