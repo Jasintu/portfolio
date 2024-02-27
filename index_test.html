@@ -1,119 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <style>
-        .timeline {
-            position: relative;
-            max-width: 100%;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            height: 6px;
-            background-color: #6c757d;
-            left: 0;
-            right: 0;
-            top: 50%;
-            margin-top: -3px;
-        }
-
-        .container {
-            padding: 10px 40px;
-            position: relative;
-            background-color: inherit;
-            width: 50%;
-        }
-
-        .container::after {
-            content: '';
-            position: absolute;
-            width: 25px;
-            height: 25px;
-            bottom: -17px;
-            background-color: white;
-            border: 4px solid #6c757d;
-            left: 15px;
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .left {
-            top: 0;
-        }
-
-        .right {
-            top: 50%;
-        }
-
-        .left::before {
-            content: " ";
-            width: 0;
-            position: absolute;
-            left: 22px;
-            height: 0;
-            z-index: 1;
-            bottom: 30px;
-            border: medium solid white;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
-        }
-
-        .right::before {
-            content: " ";
-            width: 0;
-            position: absolute;
-            left: 22px;
-            height: 0;
-            z-index: 1;
-            top: 30px;
-            border: medium solid white;
-            border-width: 10px 10px 10px 0;
-            border-color: transparent white transparent transparent;
-        }
-
-        .right::after {
-            top: -16px;
-        }
-
-        .content {
-            padding: 20px 30px;
-            background-color: white;
-            position: relative;
-            border-radius: 6px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Repositórios do GitHub</title>
 </head>
 <body>
+    <h1>Meus Repositórios do GitHub</h1>
+    <input type="text" id="username" placeholder="Digite seu nome de usuário do GitHub">
+    <input type="text" id="repositories" placeholder="Repositórios (separados por vírgula)">
+    <button onclick="getRepositories()">Buscar Repositórios</button>
+    <ul id="repositoriesList"></ul>
 
-<div class="timeline">
-  <div class="container left">
-    <div class="content">
-      <h2>2023</h2>
-      <p>Descrição do evento em 2023.</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2024</h2>
-      <p>Descrição do evento em 2024.</p>
-    </div>
-  </div>
-  <div class="container left">
-    <div class="content">
-      <h2>2025</h2>
-      <p>Descrição do evento em 2025.</p>
-    </div>
-  </div>
-  <div class="container right">
-    <div class="content">
-      <h2>2026</h2>
-      <p>Descrição do evento em 2026.</p>
-    </div>
-  </div>
-  <!-- Adicione mais eventos conforme necessário -->
-</div>
+    <script>
+        async function getRepositories() {
+            const repositoriesInput = ['STATELLEBR', 'Jasintu']
+            const repositoriesList = document.getElementById('repositoriesList');
+            repositoriesList.innerHTML = '';
 
+            try {
+                const response = await fetch(`https://api.github.com/users/Jasintu/repos`);
+                const repositories = await response.json();
+
+                if (response.ok) {
+                    repositories.forEach(repo => {
+                        if (repositoriesInput.includes(repo.name)) {
+                            const listItem = document.createElement('li');
+                            listItem.textContent = repo.name;
+                            repositoriesList.appendChild(listItem);
+                        }
+                    });
+
+                    if (repositoriesList.children.length === 0) {
+                        repositoriesList.textContent = 'Nenhum dos repositórios especificados foi encontrado.';
+                    }
+                } else {
+                    repositoriesList.textContent = 'Erro ao recuperar repositórios.';
+                }
+            } catch (error) {
+                console.error('Erro ao recuperar repositórios:', error.message);
+                repositoriesList.textContent = 'Erro ao recuperar repositórios.';
+            }
+        }
+    </script>
 </body>
 </html>
