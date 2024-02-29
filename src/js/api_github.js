@@ -53,7 +53,7 @@ async function getGitHubSpi() {
                         const previewImage = document.createElement('img');
                         previewImage.src = previewImageUrl;
                         previewImage.classList.add('preview-image');
-                        previewImage.style.width = '320px'; // Definir largura como 300px
+                        previewImage.style.width = ''; // Definir largura como 300px
                         previewImage.style.height = '180px'; // Definir altura como 160px
                         rightSideProject.appendChild(previewImage);
                     }
@@ -73,8 +73,29 @@ async function getGitHubSpi() {
                     const technologiesUsed = Object.keys(languagesData);
                     technologiesUsed.forEach(tech => {
                         const techItem = document.createElement('li');
-                        techItem.textContent = tech;
                         techItem.classList.add('tech-item');
+                        
+                        // Adiciona o título ao passar o mouse sobre a tecnologia
+                        techItem.title = tech;
+
+                        // Adiciona o ícone da tecnologia usando Font Awesome
+                        const icon = document.createElement('i');
+                        icon.classList.add('fab'); // Classe para ícones de marcas (brands) no Font Awesome
+                        if (tech === 'JavaScript') {
+                            icon.classList.add('fa-js'); // Ícone para JavaScript
+                        } else if (tech === 'CSS') {
+                            icon.classList.add('fa-css3-alt'); // Ícone para CSS
+                        } else if (tech === 'HTML') {
+                            icon.classList.add('fa-html5'); // Ícone para HTML
+                        } else if (tech === 'TypeScript') {
+                            icon.classList.add('fa-typescript'); // Ícone para TypeScript
+                        } else if (tech === 'Angular') {
+                            icon.classList.add('fa-angular'); // Ícone para Angular
+                        } else {
+                            icon.classList.add('fa-code'); // Ícone padrão para outras tecnologias
+                        }
+
+                        techItem.appendChild(icon);
                         technologiesList.appendChild(techItem);
                     });
 
@@ -107,7 +128,7 @@ function createButton(text, link) {
 
 async function getPreviewImage(repoName) {
     try {
-        const response = await fetch(`https://api.github.com/repos/Jasintu/${repoName}/contents/preview.PNG`);
+        const response = await fetch(`https://api.github.com/repos/Jasintu/${repoName}/contents/preview.jpeg`);
         if (response.ok) {
             const imageData = await response.json();
             return imageData.download_url;

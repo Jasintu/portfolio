@@ -788,7 +788,7 @@ header{
     background-color: rgb(0, 0, 0);
 }
 
-.section_tree_projects{
+.section_tree_projects, .section_four_projects{
     height: 100%;
     width: 100%;
     display: flex;
@@ -918,9 +918,8 @@ header{
     align-items: center;
 }
 
-.site_preview{
-    height: 40%;
-    width: 100%;
+.preview-image{
+    border-radius: 2px;
 }
 
 .techno img{
@@ -947,23 +946,239 @@ header{
 }
 
 .techno-list {
-    list-style-type: none;
+    margin-left: -20px;
     padding: 0;
+    display: flex;
 }
 
 .tech-item {
     margin-left: 20px;
-    font-size: 16px;
-    list-style-type: square;
+    font-size: 36px;
+    list-style-type: none;
 }
+
+.fa-html5::before {
+    content: "\f13b";
+}
+
+.fa-css3-alt::before {
+    content: "\f38b";
+}
+
+.fa-js::before {
+    content: "\f3b8";
+}
+
+.fa-angular::before {
+    content: "\f1e0";
+}
+
+.fa-typescript::before {
+    content: "\f3b8"; /* Pode ser necessário verificar o código real para o TypeScript */
+}
+
 
 /*------------------------------------------*/
 
 #section4 {
-      background-color: lightsalmon;
+      background-color: rgb(0, 0, 0);
   }
 
-  @keyframes slideIn {
+.section_four_journey_rigth_side{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_four_journey_rigth_side h1{
+    font-size: 40px;
+}
+
+.section_four_journey_rigth_side h2{
+    font-size: 25px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.email_adress_name{
+    display: flex;
+    gap: 20px;
+}
+
+.input_area{
+    height: 50px;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.input_area:focus{
+    background-color: black;
+    border-bottom: 1px solid white;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    color: #ffffff;
+}
+
+.input_area:focus{
+    background-color: black;
+    border-bottom: 1px solid white;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    color: #ffffff;
+}
+
+#email:focus + label{
+    background-color: rgb(255, 255, 255);
+}
+
+#email{
+}
+
+.color{
+}
+
+.input_text{
+    height: 100px;
+    background-color: black;
+    border-bottom: 1px solid white;
+    color: #e6e5e5;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    font-size: 26px;
+    resize: none;
+    width: 100%;
+}
+
+textarea:focus{
+    outline: none;
+    color: #e6e5e5;
+}
+
+label{
+    font-weight: bold;
+    color: #6b6868;
+}
+
+input:focus{
+    outline: none;
+    transition: 0.3s ease;
+}
+
+#nome{
+}
+
+#nome:focus + label{
+    color: antiquewhite;
+    scale: 1.5;
+}
+
+form{
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#email{
+    color: #252525;
+}
+
+.send_msg:hover::before{
+    width: 100%;
+    background-color: rgb(7, 7, 7);
+}
+
+.send_msg{
+    width: 70%;
+    height: 100px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.send_msg:before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 100px;
+    background-color: transparent;
+    transition: 0.3s ease;
+    z-index: -1;
+}
+
+.send_msg span{
+    margin-top: 3px;
+    color: #ffffff;
+    font-size: 50px;
+}
+
+.message{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.other_conect{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+}
+
+.other_conect div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.other_conect img{
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+#instaicon{
+    width: 37px;
+    height: 37px;
+    background-color: #000;
+}
+
+/* Estilo para o input preenchido automaticamente */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important; /* Define a cor de fundo para branco */
+    background-color: transparent !important; /* Define a cor de fundo para transparente */
+}
+
+
+@keyframes slideIn {
       from {
           margin-bottom: 100%;
         }
