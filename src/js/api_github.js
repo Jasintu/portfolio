@@ -1,7 +1,7 @@
 async function getGitHubSpi() {
     const repositoriesInput = ['STATELLEBR', 'CloscaBottle'];
     const repositoriesList = document.getElementById('proj');
-    repositoriesList.innerHTML = ''; // Limpa o conteúdo anterior
+    repositoriesList.innerHTML = '';
 
     try {
         const response = await fetch(`https://api.github.com/users/Jasintu/repos`);
@@ -14,7 +14,7 @@ async function getGitHubSpi() {
                     projectPreview.classList.add('proj');
 
                     const title = document.createElement('h1');
-                    title.textContent = repo.name.toUpperCase(); // Torna o título maiúsculo
+                    title.textContent = repo.name.toUpperCase();
 
                     const rightSideProject = document.createElement('div');
                     rightSideProject.classList.add('rigth_side_project');
@@ -32,29 +32,24 @@ async function getGitHubSpi() {
                     technologiesList.classList.add('techno-list');
 
                     const paragraph = document.createElement('p');
-                    paragraph.textContent = repo.description || "Descrição não disponível"; // Exibe a descrição do repositório ou "Descrição não disponível" se não houver descrição
-
+                    paragraph.textContent = repo.description || "Descrição não disponível";
                     const date = document.createElement('span');
-                    date.textContent = 'Última atualização: ' + new Date(repo.updated_at).toLocaleDateString(); // Exibe a data do último update do repositório
+                    date.textContent = 'Última atualização: ' + new Date(repo.updated_at).toLocaleDateString();
                     date.classList.add("date_proj");
-
                     description.appendChild(technologiesHeader);
                     description.appendChild(technologiesList);
                     description.appendChild(descriptionTitle);
                     description.appendChild(paragraph);
                     description.appendChild(date);
-
-                    const siteButton = createButton('VISITE O SITE', `https://${repo.owner.login}.github.io/${repo.name}`); // Adiciona link para o site hospedado no GitHub Pages
-                    const repoButton = createButton('CHEQUE REPOSITÓRIO', repo.html_url); // Adiciona link para o repositório no GitHub
-
-                    // Adiciona a imagem de pré-visualização
+                    const siteButton = createButton('VISITE O SITE', `https://${repo.owner.login}.github.io/${repo.name}`);
+                    const repoButton = createButton('CHEQUE REPOSITÓRIO', repo.html_url);
                     const previewImageUrl = await getPreviewImage(repo.name);
                     if (previewImageUrl) {
                         const previewImage = document.createElement('img');
                         previewImage.src = previewImageUrl;
                         previewImage.classList.add('preview-image');
-                        previewImage.style.width = ''; // Definir largura como 300px
-                        previewImage.style.height = '180px'; // Definir altura como 160px
+                        previewImage.style.width = '';
+                        previewImage.style.height = '180px'; 
                         rightSideProject.appendChild(previewImage);
                     }
 
@@ -66,40 +61,31 @@ async function getGitHubSpi() {
                     projectPreview.appendChild(rightSideProject);
 
                     repositoriesList.appendChild(projectPreview);
-
-                    // Extração e exibição das tecnologias
                     const languagesResponse = await fetch(repo.languages_url);
                     const languagesData = await languagesResponse.json();
                     const technologiesUsed = Object.keys(languagesData);
                     technologiesUsed.forEach(tech => {
                         const techItem = document.createElement('li');
                         techItem.classList.add('tech-item');
-                        
-                        // Adiciona o título ao passar o mouse sobre a tecnologia
                         techItem.title = tech;
-
-                        // Adiciona o ícone da tecnologia usando Font Awesome
                         const icon = document.createElement('i');
-                        icon.classList.add('fab'); // Classe para ícones de marcas (brands) no Font Awesome
+                        icon.classList.add('fab');
                         if (tech === 'JavaScript') {
-                            icon.classList.add('fa-js'); // Ícone para JavaScript
+                            icon.classList.add('fa-js');
                         } else if (tech === 'CSS') {
-                            icon.classList.add('fa-css3-alt'); // Ícone para CSS
+                            icon.classList.add('fa-css3-alt'); 
                         } else if (tech === 'HTML') {
-                            icon.classList.add('fa-html5'); // Ícone para HTML
+                            icon.classList.add('fa-html5')
                         } else if (tech === 'TypeScript') {
-                            icon.classList.add('fa-typescript'); // Ícone para TypeScript
+                            icon.classList.add('fa-typescript');
                         } else if (tech === 'Angular') {
-                            icon.classList.add('fa-angular'); // Ícone para Angular
+                            icon.classList.add('fa-angular');
                         } else {
-                            icon.classList.add('fa-code'); // Ícone padrão para outras tecnologias
+                            icon.classList.add('fa-code');
                         }
-
                         techItem.appendChild(icon);
                         technologiesList.appendChild(techItem);
                     });
-
-                    // Adiciona título "Descrição" após a lista de tecnologias
                 }
             });
         } else {

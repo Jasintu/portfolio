@@ -909,8 +909,7 @@ header{
 }
 
 .title{
-    font-size: 20px;  
-    
+    font-size: 20px;
 }
 
 .techno{
@@ -972,7 +971,7 @@ header{
 }
 
 .fa-typescript::before {
-    content: "\f3b8"; /* Pode ser necessário verificar o código real para o TypeScript */
+    content: "\f3b8";
 }
 
 
