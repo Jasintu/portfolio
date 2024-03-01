@@ -1,38 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enviar Email</title>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        function enviarEmail() {
-            Email.send({
-                Host: "smtp.mailtrap.io", // Coloque o host SMTP do seu provedor de e-mail aqui
-                Username: "seu_username", // Coloque o seu nome de usuário SMTP aqui
-                Password: "sua_senha", // Coloque a sua senha SMTP aqui
-                To: 'henriqueedev@gmail.com', // Coloque o endereço de e-mail do destinatário aqui
-                From: document.getElementById("email").value, // Usuário pode inserir o e-mail de onde está enviando
-                Subject: 'Nova mensagem de ' + document.getElementById("nome").value, // Assunto do email
-                Body: document.getElementById("mensagem").value // Corpo do email
-            }).then(
-                mensagem => alert("Email enviado com sucesso!")
-            ).catch(
-                erro => alert("Erro ao enviar o email: " + erro)
-            );
-        }
-    </script>
-</head>
-<body>
-    <h2>Formulário de Contato</h2>
-    <form>
-        <label for="nome">Nome:</label><br>
-        <input type="text" id="nome" name="nome" required><br><br>
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="mensagem">Mensagem:</label><br>
-        <textarea id="mensagem" name="mensagem" rows="4" cols="50" required></textarea><br><br>
-        <button type="button" onclick="enviarEmail()">Enviar Email</button>
-    </form>
-</body>
-</html>
+let sections = [document.getElementById("section1"), document.getElementById("section2"), document.getElementById("section3"), document.getElementById("section4")];
+let squares = [document.getElementById("square1"), document.getElementById("square2"), document.getElementById("square3"), document.getElementById("square4")]
+let currentSectionIndex = 0;
+let isScrolling = false;
+squares[currentSectionIndex].classList.add('square_mark');
+window.addEventListener("wheel", scrollHandler);
+function scrollHandler(event) {
+  if (!isScrolling) {
+    isScrolling = true;
+    setTimeout(() => {
+      if (event.deltaY > 0 && currentSectionIndex < sections.length - 1) {
+        squares[currentSectionIndex].classList.remove('square_mark');
+        sections[currentSectionIndex].style.animation = "none";
+        sections[currentSectionIndex].style.opacity = "0";
+        currentSectionIndex++;
+        sections[currentSectionIndex].style.animation = "animation_background 0.4s ease";
+        sections[currentSectionIndex].style.opacity = "1";
+        squares[currentSectionIndex].classList.add('square_mark');
+      } else if (event.deltaY < 0 && currentSectionIndex > 0) {
+        sections[currentSectionIndex].style.opacity = "0";
+        squares[currentSectionIndex].classList.remove('square_mark');
+        sections[currentSectionIndex].style.animation = "none";
+        currentSectionIndex--;
+        sections[currentSectionIndex].style.opacity = "1";
+        sections[currentSectionIndex].style.animation = "animation_background_reverse 0.4s ease";
+        squares[currentSectionIndex].classList.add('square_mark');
+      }
+      isScrolling = false;
+    }, 300);
+    window.removeEventListener("wheel", scrollHandler);
+    setTimeout(() => {
+      window.addEventListener("wheel", scrollHandler);
+    }, 300);
+  }
+}
+
+console.log("Acho que você gostou do meu portfólio e provavelmente gostaria de saber como foi feito, né? :)")
+console.log("Você pode conferir aqui : https://github.com/Jasintu/portfolio")
