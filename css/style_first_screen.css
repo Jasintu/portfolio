@@ -235,7 +235,6 @@ header{
     justify-content: center;
     align-items: center;
     visibility: hidden;
-    background-color: #000;
 }
 
 @keyframes animation_background{
@@ -270,7 +269,8 @@ header{
 }
 
 .main_matter_picture{
-    background-image: radial-gradient(circle at 20% 0%, rgba(0, 0, 0, 0.955), rgba(0, 0, 0, 0.976), black);
+    background-image: radial-gradient(circle at 20% 0%, rgb(8, 8, 8), rgba(0, 0, 0, 0.976), black);
+    background-color: antiquewhite;
     height: 100vh;
     width: 100%;
     background-position: top;
@@ -344,14 +344,14 @@ header{
 
 .main_matter_picture_left_side_2{
     width: 20%;
+    gap: 10px;
     color: #dad3d3;
     height: 100%;
     text-align: center;
-    justify-content: start;
+    justify-content: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 90px;
     animation: 1s intro_main_matter_picture forwards;
 }
 
@@ -362,27 +362,30 @@ header{
 }
 
 
-.main_matter_picture_left_side_2 p{
+.number_location{
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
     font-size: 100px;
     white-space: nowrap;
 }
 
-.main_matter_picture_left_side_2 span{
+._{
     height: 50px;
     width: 5px;
     background-color: #e6e5e5;
-    margin-top: -190px;
 }
 
-.main_matter_picture_left_side_2  h2{
+.introduction{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.introduction div{
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
     font-size: 30px;
-    transform: rotate(90deg);
-    margin-top: 40px;
-    white-space: nowrap;
+    font-weight: bold;
 }
-
 
 .main_matter_picture_left_side p{
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
@@ -401,6 +404,7 @@ header{
 }
 
 .main_matter_picture_left_side h2{
+    transition: 0.2s ease;
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
     font-size: 100px;
     width: 70%;
@@ -443,13 +447,6 @@ header{
     background-color: #ffffff;
 }
 
-.main_ad_matter{
-    width: 100%;
-    height: 30vh;
-    animation: 1s main_ad_matter ease;
-    display: flex;
-}
-
 @keyframes main_ad_matter{
     from{
         margin-top: 100%;
@@ -460,13 +457,14 @@ header{
 
 .me{
     height: 100%;
-    width: 100%;
+    width: 10%;
     position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    margin-left: 23%;
     animation: intro_main_matter_picture_pic 1s ease;
+    background-color: rgba(0, 255, 255, 0);
+    margin-left: 60%;
 }
 
 .me img{
@@ -481,37 +479,22 @@ header{
 .section_two_journey{
     height: 100vh;
     width: 100vw;
-    background-image: radial-gradient(circle at 2% 99%, rgba(0, 0, 0, 0.965), rgba(0, 0, 0, 0.985), black);
+    background-image: radial-gradient(circle at 20% 0%, rgb(8, 8, 8), rgba(0, 0, 0, 0.976), black);
     display: flex;
 }
 
 .section_two_journey_left_side{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
     width: 20%;
 }
 
-.section_two_journey_left_side p{
+.section_two_journey_left_side div{
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
-    font-size: 100px;
-    white-space: nowrap;
-}
-
-
-.section_two_journey_left_side p{
-    text-shadow: 4px 4px 4px rgb(0, 0, 0);
-    font-size: 100px;
-    white-space: nowrap;
-}
-
-.section_two_journey_left_side span{
-    height: 50px;
-    width: 5px;
-    background-color: #e6e5e5;
-    margin-top: -100px;
+    text-align: center;
 }
 
 .section_two_journey_left_side  h2{
@@ -523,7 +506,7 @@ header{
 }
 .section_tree_journey_left_side{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
@@ -784,11 +767,15 @@ header{
 
 /*terceira secão*/
 
-#section3 {
-    background-color: rgb(0, 0, 0);
+.section_tree_projects{
+    background-image: radial-gradient(circle at 60% 0%, rgb(12, 12, 12), rgba(0, 0, 0, 0.976), black);
+    height: 100%;
+    width: 100%;
+    display: flex;
 }
 
-.section_tree_projects, .section_four_projects{
+.section_four_projects{
+    background-image: radial-gradient(circle at 20% 0%, rgb(7, 7, 7), rgba(0, 0, 0, 0.976), black);
     height: 100%;
     width: 100%;
     display: flex;
@@ -991,11 +978,13 @@ header{
 }
 
 .section_four_journey_rigth_side h1{
-    font-size: 40px;
+    font-size: 35px;
+    font-weight: 300;
 }
 
 .section_four_journey_rigth_side h2{
-    font-size: 25px;
+    font-weight: 300;
+    font-size: 30px;
     text-align: center;
     margin-top: -10px;
 }
@@ -1046,7 +1035,7 @@ header{
 
 .input_text{
     height: 100px;
-    background-color: black;
+    background-color: transparent;
     border-bottom: 1px solid white;
     color: #e6e5e5;
     border-top: 0px;
@@ -1063,7 +1052,7 @@ textarea:focus{
 }
 
 label{
-    font-weight: bold;
+    font-weight: 300;
     color: #6b6868;
 }
 
@@ -1072,24 +1061,20 @@ input:focus{
     transition: 0.3s ease;
 }
 
-#nome{
+input::placeholder{
+    font-size: 25px;
 }
 
-#nome:focus + label{
-    color: antiquewhite;
-    scale: 1.5;
+textarea::placeholder{
+    font-size: 25px;
 }
 
 form{
-    font-weight: bold;
+    font-weight: 300;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#email{
-    color: #252525;
 }
 
 .send_msg:hover::before{
@@ -1097,13 +1082,19 @@ form{
     background-color: rgb(7, 7, 7);
 }
 
+.send_msg:hover {
+    color: #ffffff;
+}
+
 .send_msg{
+    transition: 0.3s ease;
     width: 70%;
     height: 100px;
+    font-weight: 100;
     background-color: transparent;
     border: 1px solid white;
-    color: #ffffff;
-    font-size: 30px;
+    color: #c4b9b9;
+    font-size: 25px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -1146,6 +1137,11 @@ form{
     align-items: center;
     gap: 5px;
     flex-direction: column;
+    font-weight: 300;
+}
+
+.other_conect p{
+    font-size: 14px;
 }
 
 .other_conect div{
@@ -1168,12 +1164,23 @@ form{
     background-color: #000;
 }
 
-/* Estilo para o input preenchido automaticamente */
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 1000px white inset !important; /* Define a cor de fundo para branco */
-    background-color: transparent !important; /* Define a cor de fundo para transparente */
+.custom-label {
+    transition: 0.2s ease;
 }
 
+.custom-label.focus {
+    transition: 0.2s ease;
+    color: rgb(182, 180, 180);
+}
+
+.input_area:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    background-color: transparent !important;
+}
+.input_area:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    background-color: transparent !important;
+}
 
 @keyframes slideIn {
       from {

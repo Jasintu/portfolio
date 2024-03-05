@@ -6,6 +6,7 @@
     <title>Henrique: Dev Front-End</title>
     <!-----------importação via link------------->
     <link rel="stylesheet" href="css/style_first_screen.css">
+    <link rel="stylesheet" href="css/style_second_screen.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,9 +57,20 @@
             <div class="left_side_section_one">
                 <div class="main_matter_picture">
                     <div class="main_matter_picture_left_side_2">
-                        <p>01</p>  
-                        <span></span>           
-                        <h2>I N T R O D U Ç Ã O</h2>
+                        <div class="number_location">01</div>  
+                        <div class="_"></div>
+                        <div class="introduction">
+                            <div>I</div>
+                            <div>N</div>
+                            <div>T</div>
+                            <div>R</div>
+                            <div>O</div>
+                            <div>D</div>
+                            <div>U</div>
+                            <div>Ç</div>
+                            <div>A</div>
+                            <div>O</div>
+                        </div>          
                     </div>
                     <div class="main_matter_picture_left_side">
                         <h1>Olá!</h1>
@@ -82,9 +94,17 @@
         <section id="section2" class="section slideIn">
             <div class="section_two_journey">
                 <div class="section_two_journey_left_side">
-                    <p>02</p>  
-                    <span></span>           
-                    <h2>T R A J E T Ó R I A</h2>
+                    <div class="number_location">02</div>  
+                    <div class="_"></div>
+                    <div class="introduction">
+                        <div>J</div>
+                        <div>O</div>
+                        <div>R</div>
+                        <div>N</div>
+                        <div>A</div>
+                        <div>D</div>
+                        <div>A</div>
+                    </div>     
                 </div>
                 <div class="section_two_journey_rigth_side">
                     <div class="section_two_journey_rigth_side_content"  id="draggableDiv">
@@ -214,9 +234,18 @@
         <section id="section3" class="section slideIn">
             <div class="section_tree_projects">
                 <div class="section_tree_journey_left_side">
-                    <p>03</p>  
-                    <span></span>           
-                    <h2>P R O J E T O S</h2>
+                    <div class="number_location">03</div>  
+                    <div class="_"></div>
+                    <div class="introduction">
+                        <div>P</div>
+                        <div>R</div>
+                        <div>O</div>
+                        <div>J</div>
+                        <div>E</div>
+                        <div>T</div>
+                        <div>O</div>
+                        <div>S</div>
+                    </div>    
                 </div>
                 <div class="section_tree_journey_rigth_side" id="projects">
                     <div class="projects" id="proj">
@@ -228,28 +257,37 @@
         <section id="section4" class="section slideIn">
             <div class="section_four_projects">
                 <div class="section_tree_journey_left_side">
-                    <p>04</p>  
-                    <span></span>           
-                    <h2>C O N T A T O S</h2>
+                    <div class="number_location">04</div>  
+                    <div class="_"></div>
+                    <div class="introduction">
+                        <div>C</div>
+                        <div>O</div>
+                        <div>N</div>
+                        <div>T</div>
+                        <div>A</div>
+                        <div>T</div>
+                        <div>O</div>
+                        <div>S</div>
+                    </div>    
                 </div>
                 <div class="section_four_journey_rigth_side">
                     <h1>Envie-me uma mensagem!</h1>
-                    <h2>Tem alguma proposta, questão ou apenas quer conversar?</h2>
+                    <h2>Tem alguma proposta, questão ou apenas quer conversar?</h2>    
                     <form action="https://api.staticforms.xyz/submit" method="POST">
                         <input type="hidden" name="accessKey" value="f9fdf1cd-c357-4651-b724-1875f8e83de4">
                         <div class="email_adress_name">
                             <div>
-                                <label for="name">Nome:</label><br>
-                                <input type="text" id="nome" name="name" class="input_area" autocomplete="off" placeholder="Digite seu nome" ><br><br>
+                                <label for="name" class="custom-label" id="name-label">Nome:</label><br>
+                                <input type="text" id="nome" name="name" class="input_area" placeholder="Digite seu nome" onfocus="changeLabelStyle('name-label')" onblur="restoreLabelStyle('name-label')"><br><br>
                             </div>
                             <div>
-                                <label for="email">Endereço de E-mail:</label><br>
-                                <input type="email" id="email" name="email" class="input_area" autocomplete="off" placeholder="Seu e-mail para contato"><br><br>
+                                <label for="email" class="custom-label" id="email-label">Endereço de E-mail:</label><br>
+                                <input type="email" id="email" name="email" class="input_area" placeholder="Seu e-mail para contato" onfocus="changeLabelStyle('email-label')" onblur="restoreLabelStyle('email-label')"><br><br>
                             </div>
                         </div>
                         <div class="message">
-                            <label for="message">O que tem em mente?</label><br>
-                            <textarea id="mensagem" name="message" rows="4" cols="50" class="input_text" placeholder="Olá, eu gostaria de entrar em contato com você. Você chamou minha atenção em..."></textarea><br><br>
+                            <label for="message" class="custom-label" id="message-label">O que tem em mente?</label><br>
+                            <textarea id="mensagem" name="message" rows="4" cols="50" class="input_text" placeholder="Olá, eu gostaria de entrar em contato com você. Você chamou minha atenção em..." onfocus="changeLabelStyle('message-label')" onblur="restoreLabelStyle('message-label')"></textarea><br><br>
                         </div>
                         <button type="submit" class="send_msg" id="send_msg">Enviar Mensagem<span class="material-symbols-outlined">trending_flat</span></button>
                     </form>

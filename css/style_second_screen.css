@@ -1,0 +1,23 @@
+@media (min-width: 0px) and (max-width: 1453px) {
+    .main_matter_picture_left_side h2{
+        transition: 0.3s ease;
+        text-shadow: 4px 4px 4px rgb(0, 0, 0);
+        font-size: 70px;
+        width: 70%;
+        margin-top: -40px;
+        margin-bottom: -20px;
+    }
+    
+    .main_matter_picture_left_side p{
+        text-shadow: 4px 4px 4px rgb(0, 0, 0);
+        font-size: 15px;
+        width: 35%;
+        color: #ffffff;
+    }
+    
+    .me img{
+        transition: 0.2s ease;
+        width: 90vw;
+        height:90%;
+    }
+}

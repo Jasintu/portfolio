@@ -38,5 +38,19 @@ function scrollHandler(event) {
   }
 }
 
+function changeLabelStyle(labelId) {
+  var label = document.getElementById(labelId);
+  label.classList.add('focus');
+}
+
+function restoreLabelStyle(labelId) {
+  var label = document.getElementById(labelId);
+  label.classList.remove('focus');
+}
+
+var larguraTela = window.innerWidth;
+var alturaTela = window.innerHeight;
+//alert("O tamanho da tela é: " + larguraTela + "x" + alturaTela + " pixels");
+
 console.log("Acho que você gostou do meu portfólio e provavelmente gostaria de saber como foi feito, né? :)")
 console.log("Você pode conferir aqui : https://github.com/Jasintu/portfolio")
