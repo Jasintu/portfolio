@@ -69,7 +69,8 @@
     .main_matter_picture_left_side{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: start;
+        margin-top: -10px;
     }
 
     .main_matter_picture_left_side2{
@@ -88,7 +89,21 @@
         margin-bottom: -10px;
     }
 
-    
+    .menu{
+        height: 50px;
+        width: 90px;
+        margin-top: 50px;
+        margin-right: 50px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: end;
+        color: rgb(226, 223, 223);
+        background-color: transparent;
+        border: 0px;
+    }
+
     .section_locate{
         animation: 1s intro_main_matter_picture_reverse ease;
         height: 150px;
@@ -98,7 +113,7 @@
         align-items: center;
         gap: 40px;
         position: absolute;
-        top: 50%;
+        top: 470px;
         left: 20%;
         transform: translate(-50%, -50%);
     }
@@ -109,37 +124,37 @@
     
     .main_matter_picture_left_side p{
         text-shadow: 4px 4px 4px rgb(0, 0, 0);
-        font-size: 16px;
+        font-size: 15px;
         width: 80%;
         color: #ffffff;
+        margin-bottom: 10px;
     }
     
     .me{
-        position: absolute;
-        display: none;
+        width: 80%;
+        position: relative;
+        display: flex;
         justify-content: center;
         align-items: center;
         animation: intro_main_matter_picture_pic 1s ease;
-        background-color: rgba(0, 255, 255, 0);
-        margin-left: 0%;
-        width: 100%;
-        margin-top: 100px;
-
-    }
-
-    .me img{
+        margin-left: 0px;
         height: auto;
-        width: 35vw;
+        margin-bottom: 30px;
+    }
+    
+    .me img{
+        height: 300px;
+        width: auto;
     }
 
     .git-logo{
         background-color: #ffffff;
         border-radius: 50%;
-        height: 60px;
+        height: 50px;
     }
     
     .linkend-logo{
-        height: 60px;
+        height: 50px;
         background-color: #ffffff;
         border-radius: 4px;
     }
@@ -149,6 +164,7 @@
     }
 
     .flex_direction{
+        width: 80%;
         display: flex;
         justify-content: center;
         align-items: center;
