@@ -48,9 +48,47 @@ function restoreLabelStyle(labelId) {
   label.classList.remove('focus');
 }
 
+let startY;
+
+window.addEventListener('touchstart', handleTouchStart, false);
+window.addEventListener('touchmove', handleTouchMove, false);
+
+function handleTouchStart(event) {
+    startY = event.touches[0].clientY;
+}
+
+function handleTouchMove(event) {
+        if (!startY) {
+            return;
+        }
+
+        let currentY = event.touches[0].clientY;
+        let deltaY = currentY - startY;
+
+        if (deltaY > 0 && currentSectionIndex <= 2) {
+          sections[currentSectionIndex].style.opacity = "0";
+          sections[currentSectionIndex].style.visibility = "hidden";
+          squares[currentSectionIndex].classList.remove('square_mark');
+          currentSectionIndex++;
+          sections[currentSectionIndex].style.opacity = "1";
+          sections[currentSectionIndex].style.visibility = "visible";
+          squares[currentSectionIndex].classList.add('square_mark');
+        } else if (deltaY < 0 && currentSectionIndex >= 1) {
+          sections[currentSectionIndex].style.opacity = "0";
+          sections[currentSectionIndex].style.visibility = "hidden";
+          squares[currentSectionIndex].classList.remove('square_mark');
+          currentSectionIndex--;
+          sections[currentSectionIndex].style.opacity = "1";
+          sections[currentSectionIndex].style.visibility = "visible";
+          squares[currentSectionIndex].classList.add('square_mark');
+        }
+        startY = null;
+    }
+  
+
 var larguraTela = window.innerWidth;
 var alturaTela = window.innerHeight;
-//alert("O tamanho da tela é: " + larguraTela + "x" + alturaTela + " pixels");
+alert("O tamanho da tela é: " + larguraTela + "x" + alturaTela + " pixels");
 
 console.log("Acho que você gostou do meu portfólio e provavelmente gostaria de saber como foi feito, né? :)")
 console.log("Você pode conferir aqui : https://github.com/Jasintu/portfolio")

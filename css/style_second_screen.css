@@ -1,4 +1,4 @@
-@media (min-width: 0px) and (max-width: 1453px) {
+@media (min-width: 962px) and (max-width: 1453px) {
     .main_matter_picture_left_side h2{
         transition: 0.3s ease;
         text-shadow: 4px 4px 4px rgb(0, 0, 0);
@@ -20,4 +20,149 @@
         width: 90vw;
         height:90%;
     }
+}
+
+@media (min-width: 0px) and (max-width: 962px) {
+    /*
+    primeira sec
+    */
+
+    .number_location{
+        font-size: 40px;
+        text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    }
+
+    ._{
+        height: 10px;
+        width: 2px;
+    }
+
+    .introduction{
+       margin-top: 10px;
+       font-size: 10px;
+       text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    }
+
+    .introduction div{
+       font-size: 10px;
+       text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    }
+
+    .left_side_section_one{
+        height: 100vh;
+        width: 100vw;
+    }
+
+    #section4{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        display: none;
+    }
+
+    .main_matter_picture_left_side{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main_matter_picture_left_side2{
+        display: flex;
+        flex-direction: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main_matter_picture_left_side h2{
+        transition: 0.3s ease;
+        text-shadow: 4px 4px 4px rgb(0, 0, 0);
+        font-size: 30px;
+        width: 80%;
+        margin-top: -40px;
+        margin-bottom: -10px;
+    }
+
+    
+    .section_locate{
+        animation: 1s intro_main_matter_picture_reverse ease;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+    }
+
+    .main_matter_picture_left_side h1{
+        margin-bottom: 50px;
+    }
+    
+    .main_matter_picture_left_side p{
+        text-shadow: 4px 4px 4px rgb(0, 0, 0);
+        font-size: 16px;
+        width: 80%;
+        color: #ffffff;
+    }
+    
+    .me{
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        animation: intro_main_matter_picture_pic 1s ease;
+        background-color: rgba(0, 255, 255, 0);
+        margin-left: 0%;
+        width: 100%;
+        margin-top: 100px;
+
+    }
+
+    .me img{
+        height: auto;
+        width: 35vw;
+    }
+
+    .git-logo{
+        background-color: #ffffff;
+        border-radius: 50%;
+        height: 60px;
+    }
+    
+    .linkend-logo{
+        height: 60px;
+        background-color: #ffffff;
+        border-radius: 4px;
+    }
+
+    .flex_direction{
+        gap: 5px;
+    }
+
+    .flex_direction{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        z-index: 3;
+    }
+
+    /*
+    segunda sec
+    */
+
+    .journey_bottom{
+        pointer-events: none;
+    }
+
 }
