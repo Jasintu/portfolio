@@ -27,32 +27,33 @@ var draggableDiv = document.getElementById('draggableDiv');
     });
 
     
-var draggableDiv2 = document.getElementById('projects');
-    var draggableContent2 = document.getElementById('proj');
-    var isDown = false;
+    var draggableDiv = document.getElementById('draggableDiv');
+    var isDragging = false;
     var startX;
     var scrollLeft;
-
-    draggableDiv2.addEventListener('mousedown', function(e) {
-        isDown = true;
-        draggableDiv2.style.cursor = 'grabbing';
-        startX = e.pageX - draggableDiv2.offsetLeft;
-        scrollLeft = draggableDiv2.scrollLeft;
+    
+    draggableDiv.addEventListener('touchstart', function(e) {
+        isDragging = true;
+        startX = e.touches[0].pageX - draggableDiv.offsetLeft;
+        scrollLeft = draggableDiv.scrollLeft;
     });
-    draggableDiv2.addEventListener('mouseleave', function() {
-        isDown = false;
-        draggableDiv2.style.cursor = 'grab';
-    });
-    draggableDiv2.addEventListener('mouseup', function() {
-        isDown = false;
-        draggableDiv2.style.cursor = 'grab';
-    });
-    draggableDiv2.addEventListener('mousemove', function(e) {
-        if(!isDown) return;
+    
+    draggableDiv.addEventListener('touchmove', function(e) {
+        if (!isDragging) return;
         e.preventDefault();
-        var x = e.pageX - draggableDiv2.offsetLeft;
-        var walk = (x - startX) * 1; 
-        draggableDiv2.scrollLeft = scrollLeft - walk;
+        var x = e.touches[0].pageX - draggableDiv.offsetLeft;
+        var walk = (x - startX) * 1;
+        draggableDiv.scrollLeft = scrollLeft - walk;
     });
+    
+    draggableDiv.addEventListener('touchend', function() {
+        isDragging = false;
+    });
+    
 
+    let minhaDiv = document.getElementById('draggableDiv');
+
+    minhaDiv.addEventListener('touchstart', function(event) {
+        event.stopPropagation();
+    });
     

@@ -1,4 +1,4 @@
-@media (min-width: 962px) and (max-width: 1453px) {
+@media (min-width: 980px) and (max-width: 1453px) {
     .main_matter_picture_left_side h2{
         transition: 0.3s ease;
         text-shadow: 4px 4px 4px rgb(0, 0, 0);
@@ -22,7 +22,7 @@
     }
 }
 
-@media (min-width: 0px) and (max-width: 962px) {
+@media (min-width: 0px) and (max-width: 500px) {
     /*
     primeira sec
     */
@@ -73,11 +73,12 @@
         margin-top: -10px;
     }
 
-    .main_matter_picture_left_side2{
+    .main_matter_picture_left_side_2{
         display: flex;
         flex-direction: flex;
         justify-content: center;
         align-items: center;
+        margin-right: 10px;
     }
 
     .main_matter_picture_left_side h2{
@@ -143,7 +144,7 @@
     }
     
     .me img{
-        height: 300px;
+        height: 250px;
         width: auto;
     }
 
@@ -177,8 +178,58 @@
     segunda sec
     */
 
-    .journey_bottom{
-        pointer-events: none;
+    .card_top, .card_bottom{
+        height: 160px;
+        width: 290px;
+        backdrop-filter: blur(7px) brightness(80%) sepia(1%);
+        margin-top: 10px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        justify-self: center;
+        flex-direction: column;
+        font-weight: bold;
+        scale: 0.8;
+        margin-right: -40px;
     }
 
+    .journey_bottom{
+        margin-left: 0px;
+        width: max-content;
+        height: 50%;
+        align-items: end;
+        justify-content: center;
+        display: flex;
+        position: relative;
+    }
+    
+    .card_span, .card_span_bottom{
+        width: 100px;
+    }
+
+    .section_two_journey_rigth_side_content{
+        top: 0;
+        height: 60%;
+        width: 80%;
+        background-color: #252525;
+        border-radius: 30px;
+        background-image: url(https://i.redd.it/57ofeof1pgy01.png);
+        cursor: grab;
+        display: inline-block ;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        background-position: center;
+        background-size: cover;
+        color: #000;
+        
+    }
+
+    .card_span_noborder{
+        width: 100px;
+    }
 }
