@@ -6,6 +6,7 @@
 }
 
 @media (min-width: 980px) and (max-width: 1480px) {
+
     .main_matter_picture_left_side h2{
         transition: 0.3s ease;
         text-shadow: 4px 4px 4px rgb(0, 0, 0);
@@ -28,30 +29,9 @@
     }
 }
 
-@media (min-width: 500px) and (max-width: 800px) and (min-height: 1000px) {
-    .git-logo{
-        scale: 0.7;
-    }
-    
-    .linkend-logo{
-        scale: 0.7;
-    }
 
-    .flex_direction{
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: -20px;
-        position: relative;
-        z-index: 3;
-        margin-top: -400px;
-        flex-direction: column;
-        margin-left: -170px;
-    }
-}
 
-@media (min-width: 500px) and (max-width: 910px) {
+@media (min-width: 500px) and (max-width: 830px) {
     .number_location{
         font-size: 60px;
         text-shadow: 4px 4px 4px rgb(0, 0, 0);
@@ -78,23 +58,10 @@
         width: 100vw;
     }
 
-    #section4{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        visibility: hidden;
-        display: none;
-    }
-
     .main_matter_picture_left_side{
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: center;
         margin-top: -10px;
     }
 
@@ -109,7 +76,7 @@
     .main_matter_picture_left_side h2{
         transition: 0.3s ease;
         text-shadow: 4px 4px 4px rgb(0, 0, 0);
-        font-size: 45px;
+        font-size: 2vw;
         width: 80%;
         margin-top: -40px;
         margin-bottom: -10px;
@@ -140,8 +107,12 @@
         gap: 40px;
         position: absolute;
         top: 470px;
-        left: 20%;
+        left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    label{
+        font-size: 2.5vw;
     }
 
     .main_matter_picture_left_side h1{
@@ -150,7 +121,7 @@
     
     .main_matter_picture_left_side p{
         text-shadow: 4px 4px 4px rgb(0, 0, 0);
-        font-size: 15px;
+        font-size: 3vw;
         width: 80%;
         color: #ffffff;
         margin-bottom: 10px;
@@ -177,18 +148,12 @@
         background-color: #ffffff;
         border-radius: 50%;
         height: 90px;
-        margin-top: -5px;
     }
     
     .linkend-logo{
-        margin-top: -5px;
         height: 90px;
         background-color: #ffffff;
         border-radius: 4px;
-    }
-
-    .flex_direction{
-        gap: 5px;
     }
 
     .flex_direction{
@@ -259,9 +224,119 @@
     .card_span_noborder{
         width: 100px;
     }
+
+    /*QUARTA*/
+
+    .section_four_journey_rigth_side h1{
+        font-size: 25px;
+        font-weight: 300;
+    }
+    
+    .section_four_journey_rigth_side h2{
+        font-weight: 300;
+        font-size: 23px;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .input_text{
+        background-color: transparent;
+        border-bottom: 1px solid white;
+        color: #e6e5e5;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        font-size: 6px;
+        resize: none;
+        width: 100%;
+    }
+
+    .input_text::placeholder{
+        font-size: 4vw;
+    }
+    
+    .email_adress_name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        width: 65vw;
+    }
+    
+    .section_four_journey_rigth_side{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input_area{
+        height: 50px;
+        background-color: transparent;
+        border-bottom: 1px solid white;
+        color: #ffffff;
+        font-size: 30px;
+        width: 100%;
+    }
+    
+    .input_area::placeholder{
+        font-size: 20px;
+    }
+
+    .message{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .send_msg{
+        transition: 0.3s ease;
+        width: 80%;
+        height: 70px;
+        font-weight: 100;
+        background-color: transparent;
+        border: 1px solid white;
+        color: #c4b9b9;
+        font-size: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        margin-top: -20px;
+        font-size: 20px;
+    }
+
+    .send_msg span{
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .other_conect p{
+        margin-top: 50px;
+        font-size: 3vw;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .other_conect img{
+        width: 50px;
+        height: 50px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #instaicon{
+        width: 47px;
+        height: 47px;
+        background-color: #000;
+    }
 }
 
-@media (min-width: 910px) and (max-width: 989px) {
+@media (min-width: 830px) and (max-width: 989px) {
     /*
     primeira sec
     */
@@ -292,23 +367,10 @@
         width: 100vw;
     }
 
-    #section4{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        visibility: hidden;
-        display: none;
-    }
-
     .main_matter_picture_left_side{
         display: flex;
         flex-direction: column;
-        justify-content: start;
+        justify-content: center;
         margin-top: -10px;
     }
 
@@ -323,7 +385,7 @@
     .main_matter_picture_left_side h2{
         transition: 0.3s ease;
         text-shadow: 4px 4px 4px rgb(0, 0, 0);
-        font-size: 50px;
+        font-size: 4vw;
         width: 80%;
         margin-top: -40px;
         margin-bottom: -10px;
@@ -473,6 +535,116 @@
     .card_span_noborder{
         width: 100px;
     }
+
+        /*QUARTA*/
+
+        .section_four_journey_rigth_side h1{
+            font-size: 25px;
+            font-weight: 300;
+        }
+        
+        .section_four_journey_rigth_side h2{
+            font-weight: 300;
+            font-size: 23px;
+            text-align: center;
+            margin-top: -10px;
+        }
+    
+        .input_text{
+            background-color: transparent;
+            border-bottom: 1px solid white;
+            color: #e6e5e5;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            font-size: 6px;
+            resize: none;
+            width: 100%;
+        }
+    
+        .input_text::placeholder{
+            font-size: 3vw;
+        }
+        
+        .email_adress_name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-items: center;
+            width: 65vw;
+        }
+        
+        .section_four_journey_rigth_side{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .input_area{
+            height: 50px;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+            color: #ffffff;
+            font-size: 30px;
+            width: 100%;
+        }
+        
+        .input_area::placeholder{
+            font-size: 20px;
+        }
+    
+        .message{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .send_msg{
+            transition: 0.3s ease;
+            width: 80%;
+            height: 70px;
+            font-weight: 100;
+            background-color: transparent;
+            border: 1px solid white;
+            color: #c4b9b9;
+            font-size: 10px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            margin-top: -20px;
+            font-size: 20px;
+        }
+    
+        .send_msg span{
+            color: #ffffff;
+            font-size: 20px;
+        }
+    
+        .other_conect p{
+            margin-top: 50px;
+            font-size: 2vw;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    
+        .other_conect img{
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+        }
+    
+        #instaicon{
+            width: 37px;
+            height: 37px;
+            background-color: #000;
+        }
 }
 
 @media (min-width: 0px) and (max-width: 500px) {
@@ -481,8 +653,14 @@
     */
 
     .number_location{
-        font-size: 40px;
+        font-size: 30px;
         text-shadow: 4px 4px 4px rgb(0, 0, 0);
+        margin-bottom: 2px;
+    }
+
+    .section_locate{
+        scale: 0.5;
+        margin-top: -100px;
     }
 
     ._{
@@ -504,19 +682,6 @@
     .left_side_section_one{
         height: 100vh;
         width: 100vw;
-    }
-
-    #section4{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        visibility: hidden;
-        display: none;
     }
 
     .main_matter_picture_left_side{
@@ -546,14 +711,14 @@
     .menu{
         height: 50px;
         width: 90px;
-        margin-top: 30px;
+        margin-top: 45px;
         margin-right: 50px;
         cursor: pointer;
         display: flex;
         flex-direction: column;
         justify-content: end;
         align-items: end;
-        color: rgb(226, 223, 223);
+        color: rgb(189, 174, 174);
         background-color: transparent;
         border: 0px;
         scale: 0.6;
@@ -686,9 +851,123 @@
     .card_span_noborder{
         width: 100px;
     }
+
+    /*terceira*/
+    
+    .section_tree_journey_rigth_side{
+        scale: 0.5;
+        rotate: 90deg;
+    }    
+
+    /*QUARTA*/
+
+    .section_four_journey_rigth_side h1{
+        font-size: 15px;
+        font-weight: 300;
+    }
+    
+    .section_four_journey_rigth_side h2{
+        font-weight: 300;
+        font-size: 13px;
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .input_text{
+        background-color: transparent;
+        border-bottom: 1px solid white;
+        color: #e6e5e5;
+        border-top: 0px;
+        border-left: 0px;
+        border-right: 0px;
+        font-size: 6px;
+        resize: none;
+        width: 100%;
+    }
+
+    .input_text::placeholder{
+        font-size: 5vw;
+    }
+    
+    .email_adress_name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        width: 65vw;
+    }
+    
+    .section_four_journey_rigth_side{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input_area{
+        height: 50px;
+        background-color: transparent;
+        border-bottom: 1px solid white;
+        color: #ffffff;
+        font-size: 30px;
+        width: 100%;
+    }
+    
+    .input_area::placeholder{
+        font-size: 13px;
+    }
+
+    .message{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .send_msg{
+        transition: 0.3s ease;
+        width: 80%;
+        height: 40px;
+        font-weight: 100;
+        background-color: transparent;
+        border: 1px solid white;
+        color: #c4b9b9;
+        font-size: 10px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        cursor: pointer;
+        position: relative;
+        z-index: 0;
+        margin-top: -20px;
+    }
+
+    .send_msg span{
+        color: #ffffff;
+        font-size: 20px;
+    }
+
+    .other_conect p{
+        font-size: 3vw;
+        text-align: center;
+    }
+
+    .other_conect img{
+        margin-top: -8px;
+        width: 40px;
+        height: 40px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    #instaicon{
+        width: 37px;
+        height: 37px;
+        background-color: #000;
+    }
 }
 
-/* Estilos para telas menores (celulares) */
 @media screen and (max-width: 500px) and (max-height: 600px) {
     .me img{
         height: 170px;
