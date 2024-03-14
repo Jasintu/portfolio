@@ -197,11 +197,12 @@ header{
 
 .section_locate{
     animation: 1s intro_main_matter_picture_reverse ease;
+    width: 0px;
     height: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     gap: 40px;
     position: absolute;
     top: 50%;

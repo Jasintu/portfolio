@@ -106,7 +106,7 @@
         align-items: center;
         gap: 40px;
         position: absolute;
-        top: 470px;
+        top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
@@ -327,7 +327,7 @@
     
     .description{
         width: 100%;   
-        font-size: 3vw;
+        font-size: 2vw;
     }
     
     .title{
@@ -342,7 +342,8 @@
     }
     
     .preview-image{
-        display: none;
+        height: 100%;
+        width: 100%;
         border-radius: 2px;
     }
     
@@ -569,8 +570,8 @@
         align-items: center;
         gap: 40px;
         position: absolute;
-        top: 470px;
-        left: 20%;
+        top: 50%;
+        left: 50%;
         transform: translate(-50%, -50%);
     }
 
@@ -814,7 +815,8 @@
 
     .section_locate{
         scale: 0.5;
-        margin-top: -100px;
+        margin-top: -110px;
+        margin-left: 10px;
     }
 
     ._{
@@ -887,7 +889,7 @@
         align-items: center;
         gap: 40px;
         position: absolute;
-        top: 470px;
+        top: 60%;
         left: 20%;
         transform: translate(-50%, -50%);
     }
@@ -1296,14 +1298,6 @@
         animation: 1s intro_main_matter_picture_reverse ease;
         height: 150px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        position: absolute;
-        top: 300px;
-        left: 20%;
-        transform: translate(-50%, -50%);
     }
 
     .git-logo {
@@ -1316,5 +1310,9 @@
         height: 45px;
         background-color: #ffffff;
         border-radius: 4px;
+    }
+
+    .sections{
+        transition: 0.3s;
     }
 }

@@ -65,30 +65,30 @@ function handleTouchMove(event) {
         let currentY = event.touches[0].clientY;
         let deltaY = currentY - startY;
 
-        if (deltaY > 0 && currentSectionIndex <= 2) {
+        if (deltaY < 0 && currentSectionIndex <= 2) {
           sections[currentSectionIndex].style.opacity = "0";
-          sections[currentSectionIndex].style.visibility = "hidden";
-          squares[currentSectionIndex].classList.remove('square_mark');
-          currentSectionIndex++;
-          sections[currentSectionIndex].style.opacity = "1";
-          sections[currentSectionIndex].style.visibility = "visible";
-          squares[currentSectionIndex].classList.add('square_mark');
-        } else if (deltaY < 0 && currentSectionIndex >= 1) {
+        sections[currentSectionIndex].style.visibility = "hidden";
+        squares[currentSectionIndex].classList.remove('square_mark');
+        sections[currentSectionIndex].style.animation = "none";
+        currentSectionIndex++;
+        sections[currentSectionIndex].style.opacity = "1";
+        sections[currentSectionIndex].style.visibility = "visible";
+        sections[currentSectionIndex].style.animation = "animation_background 0.4s ease";
+        squares[currentSectionIndex].classList.add('square_mark');
+        } else if (deltaY > 0 && currentSectionIndex >= 1) {
           sections[currentSectionIndex].style.opacity = "0";
-          sections[currentSectionIndex].style.visibility = "hidden";
-          squares[currentSectionIndex].classList.remove('square_mark');
-          currentSectionIndex--;
-          sections[currentSectionIndex].style.opacity = "1";
-          sections[currentSectionIndex].style.visibility = "visible";
-          squares[currentSectionIndex].classList.add('square_mark');
+        sections[currentSectionIndex].style.visibility = "hidden";
+        squares[currentSectionIndex].classList.remove('square_mark');
+        sections[currentSectionIndex].style.animation = "none";
+        currentSectionIndex--;
+        sections[currentSectionIndex].style.opacity = "1";
+        sections[currentSectionIndex].style.animation = "animation_background_reverse 0.4s ease";
+        sections[currentSectionIndex].style.visibility = "visible";
+        squares[currentSectionIndex].classList.add('square_mark');
         }
         startY = null;
     }
   
-
-var larguraTela = window.innerWidth;
-var alturaTela = window.innerHeight;
-//alert("O tamanho da tela é: " + larguraTela + "x" + alturaTela + " pixels");
-
-console.log("Acho que você gostou do meu portfólio e provavelmente gostaria de saber como foi feito, né? :)")
-console.log("Você pode conferir aqui : https://github.com/Jasintu/portfolio")
+    console.log("Você gostou do meu portfólio? gostaria de saber como foi feito?")
+    console.log("Você pode conferir aqui : https://github.com/Jasintu/portfolio")
+    console.log("Obrigado pelo seu tempo! :)")

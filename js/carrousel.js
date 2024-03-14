@@ -77,7 +77,30 @@ var draggableDiv2 = document.getElementById('projects');
     draggableDiv.addEventListener('touchend', function() {
         isDragging = false;
     });
-    
+
+    let projects = document.getElementById('projects');
+let dragging = false;
+let start;
+let leftScroll;
+
+projects.addEventListener('touchstart', function(e) {
+    dragging = true;
+    start = e.touches[0].pageX - projects.offsetLeft;
+    leftScroll = projects.scrollLeft;
+});
+
+projects.addEventListener('touchmove', function(e) {
+    if (!dragging) return;
+    e.preventDefault();
+    let x = e.touches[0].pageX - projects.offsetLeft;
+    let move = (x - start) * 1;
+    projects.scrollLeft = leftScroll - move;
+});
+
+projects.addEventListener('touchend', function() {
+    dragging = false;
+});
+
 
     let minhaDiv = document.getElementById('draggableDiv');
 
