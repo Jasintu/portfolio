@@ -122,7 +122,7 @@ async function getPreviewImage(repoName) {
             return null;
         }
     } catch (error) {
-        console.error('Erro ao obter a imagem de pré-visualização:', error);
+        console.error('Desculpe, houve um problema ao tentar obter a imagem de pré-visualização do projeto. Isso pode ocorrer devido a uma falha na comunicação com a API do GitHub. Por favor, tente novamente mais tarde. Obrigado pela compreensão. :)', error);
         return null;
     }
 }

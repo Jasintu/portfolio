@@ -77,32 +77,21 @@ header{
     }
 }
 
-.menu_ul{
-    transform-origin: right top;
-    transition: scale 0.3s ease;
-    position: fixed;
-    top: 28%;
-    left: 87%;
+.resume{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    height: 400px;
-    width: 300px;
-    background-color: #ffffff;
-    z-index: 2;
-    scale: 0;
+    margin-top: -30vh;
 }
 
-.menu_ul_open{
-    transform-origin: right top;
-    transition: scale 0.3s ease;
-    position: fixed;
-    top: 28%;
-    left: 87%;
-    transform: translate(-50%, -50%);
-    height: 400px;
-    width: 300px;
-    background-color: #ffffff;
-    z-index: 2;
-    scale: 1;
+.resume span{
+    font-size: 80px;
+    color: #ffffff;
 }
 
 @keyframes intro_menu {
@@ -301,7 +290,7 @@ header{
     from{
         margin-top: 600%;
     }to{
-        margin-top: 0px;
+        margin-top: 0%;
     }
 }
 

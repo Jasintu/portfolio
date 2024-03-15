@@ -40,10 +40,13 @@
     </noscript>
     <header>
         <div class="container_header">
-            <div class="menu_ul" id="menu_ul"></div>
             <div class="main_container_header">
-                <button class="menu" id="menu"></button>
                 <div class="section_locate">
+                    <a href="#" download="" class="resume">
+                        <span class="material-symbols-outlined">
+                            download
+                        </span>
+                    </a>
                     <span class="square" id="square1"></span>
                     <span class="square" id="square2"></span>
                     <span class="square" id="square3"></span>
@@ -275,6 +278,7 @@
                     <h2>Tem alguma proposta, questão ou apenas quer conversar?</h2>    
                     <form action="https://api.staticforms.xyz/submit" method="POST">
                         <input type="hidden" name="accessKey" value="f9fdf1cd-c357-4651-b724-1875f8e83de4">
+                        <input type="hidden" name="redirectTo" value="https://henriqueedev.netlify.app/">
                         <div class="email_adress_name">
                             <div>
                                 <label for="name" class="custom-label" id="name-label">Nome:</label><br>
